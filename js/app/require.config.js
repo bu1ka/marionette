@@ -1,15 +1,16 @@
 require.config({
-    baseUrl: '../',
+    baseUrl: '/js/',
     paths: {
-        jquery: 'vendor/jquery/src/jquery.js',
-        _: 'vendor/underscore/underscore.js',
-        backbone: 'vendor/backbone/backbone.js',
-        marionette: 'vendor/marionette/lib/backbone.marionette.js',
-        App: 'app/App.js'
+        jquery: 'vendor/jquery/src/jquery',
+        _: 'vendor/underscore/underscore',
+        backbone: 'vendor/backbone/backbone',
+        marionette: 'vendor/marionette/lib/backbone.marionette',
+        NavBar: 'app/NavBar',
+        App: 'app/App'
     },
     shim: {
         'backbone': {
-            deps: ['underscore', 'jquery'],
+            deps: ['_', 'jquery'],
             exports: 'Backbone'
         },
         'marionette': {
