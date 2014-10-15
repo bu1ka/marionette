@@ -1,4 +1,4 @@
-define(['marionette', 'text!templates/navigation-bar.html', 'text!templates/navigation-bar-item.html'], function(Marionette) {
+define(['marionette', 'text!app/templates/navigation-bar.html', 'text!app/templates/navigation-bar-item.html'], function(Marionette) {
 
     var NavBar = Marionette.ItemView.extend({
         template: "#navigation-bar-template"

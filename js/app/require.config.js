@@ -1,7 +1,8 @@
 require.config({
-    baseUrl: '/js/',
+    baseUrl: 'js/',
     paths: {
-        jquery: 'vendor/jquery/src/jquery',
+        text: 'vendor/requirejs-text/text',
+        jquery: 'vendor/jquery/dist/jquery',
         _: 'vendor/underscore/underscore',
         backbone: 'vendor/backbone/backbone',
         marionette: 'vendor/marionette/lib/backbone.marionette',
