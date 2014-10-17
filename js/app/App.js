@@ -13,7 +13,7 @@ define(['marionette', 'NavBar'], function(Marionette, NavBar) {
         });
 
         bookmarksManager.on("initialize:after", function() {
-            var navBar = new NavBar();
+            var navBar = new NavBar.Menu();
 
             bookmarksManager.navbar.show(navBar);
         });

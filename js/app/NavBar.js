@@ -1,8 +1,24 @@
-define(['marionette', 'text!app/templates/navigation-bar.html', 'text!app/templates/navigation-bar-item.html'], function(Marionette) {
+define([
+        'marionette',
+        'text!app/templates/navigation-bar.html',
+        'text!app/templates/navigation-bar-item.html'
+    ], function(Marionette) {
 
-    var NavBar = Marionette.ItemView.extend({
-        template: "#navigation-bar-template"
-    });
+        var NavBar = Marionette.Module.extend({
 
-    return NavBar;
+            define: function() {
+
+                var MenuItem = Marionette.ItemView.extend({
+                    template: "#navigation-bar-template"
+                });
+
+                var Menu = Marionette.CollectionView.extend({
+                    itemView: MenuItem
+                });
+
+            }
+
+        });
+
+        return NavBar;
 });
