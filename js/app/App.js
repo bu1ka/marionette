@@ -1,26 +1,17 @@
 define(['marionette', 'NavBar'], function(Marionette, NavBar) {
 
+    var BookmarksManager = new Marionette.Application();
 
-    function App() {
-        this.init();
-    }
+    BookmarksManager.addRegions({
+        navbar: "#navigation-bar"
+    });
 
-    App.prototype.init = function() {
-        var bookmarksManager = new Marionette.Application();
+    BookmarksManager.on("initialize:after", function() {
+        var navBar = new NavBar.Menu();
 
-        bookmarksManager.addRegions({
-            navbar: "#navigation-bar"
-        });
+        BookmarksManager.navbar.show(navBar);
+    });
 
-        bookmarksManager.on("initialize:after", function() {
-            var navBar = new NavBar.Menu();
-
-            bookmarksManager.navbar.show(navBar);
-        });
-
-        bookmarksManager.start();
-    };
-
-    return App;
+    return BookmarksManager;
 
 });
